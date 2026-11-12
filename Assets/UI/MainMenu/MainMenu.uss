@@ -1,0 +1,148 @@
+/* ============================================================
+   Folgen 21 - Menu Principal
+   ============================================================ */
+
+.mm-root {
+    background-image: url("../Art/mainmenu_bg.png");
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.mm-vineta {
+    position: absolute;
+    left: 0; top: 0; right: 0; bottom: 0;
+    background-image: radial-gradient(ellipse at center, rgba(18, 10, 31, 0) 40%, rgba(9, 4, 17, 0.72) 100%);
+}
+
+/* ---------- esquinas ---------- */
+.mm-version {
+    position: absolute;
+    left: 28px; top: 22px;
+    font-size: 22px;
+    letter-spacing: 2px;
+    color: rgba(255, 255, 255, 0.78);
+}
+
+.mm-gearbtn {
+    position: absolute;
+    right: 30px; top: 26px;
+    width: 64px;
+    height: 64px;
+    background-image: url("../Art/icon_gear_button.png");
+    -unity-slice-left: 0; -unity-slice-right: 0; -unity-slice-top: 0; -unity-slice-bottom: 0;
+    transition-property: transform;
+    transition-duration: 0.15s;
+}
+
+.mm-gearbtn:hover {
+    transform: rotate(45deg);
+}
+
+/* ---------- logo ---------- */
+.mm-centro {
+    align-items: center;
+}
+
+.mm-logo-fila {
+    flex-direction: row;
+    align-items: baseline;
+    margin-bottom: 2px;
+}
+
+.mm-logo-a {
+    font-size: 116px;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 4px 14px rgba(0, 0, 0, 0.6);
+    letter-spacing: 2px;
+}
+
+.mm-logo-b {
+    font-size: 116px;
+    color: rgb(255, 45, 155);
+    text-shadow: 0 0 26px rgba(255, 45, 155, 0.75);
+    margin-left: 18px;
+}
+
+.mm-sub-fila {
+    flex-direction: row;
+    margin-top: -6px;
+}
+
+.mm-sub-a {
+    font-size: 34px;
+    letter-spacing: 8px;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.55);
+}
+
+.mm-sub-b {
+    font-size: 34px;
+    letter-spacing: 6px;
+    color: rgb(255, 45, 155);
+    text-shadow: 0 0 14px rgba(255, 45, 155, 0.6);
+}
+
+.mm-subrayado {
+    width: 620px;
+    margin-top: 14px;
+    transform: rotate(-1.2deg);
+}
+
+/* ---------- botonera ---------- */
+.mm-botones {
+    margin-top: 58px;
+    width: 760px;
+    align-items: center;
+}
+
+.mm-botones .f-btn {
+    width: 760px;
+    height: 88px;
+    margin-bottom: 18px;
+}
+
+.mm-btn-seleccionada,
+.mm-btn-seleccionada:hover {
+    background-image: url("../Art/btn_frame_hover.png");
+}
+
+.mm-btn-seleccionada .mm-btn-texto {
+    color: rgb(255, 255, 255);
+}
+
+.mm-icono-play { background-image: url("../Art/icon_play.png"); -unity-background-image-tint-color: rgb(255, 95, 193); }
+.mm-icono-continuar { background-image: url("../Art/icon_refresh.png"); }
+.mm-icono-ajustes { background-image: url("../Art/icon_gear.png"); }
+.mm-icono-salir { background-image: url("../Art/icon_exit.png"); }
+
+/* ---------- eslogan ---------- */
+.mm-slogan-fila {
+    position: absolute;
+    left: 0; right: 0; bottom: 26px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.mm-slogan-linea {
+    width: 140px;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.35);
+    margin: 0 22px;
+}
+
+.mm-slogan {
+    font-size: 27px;
+    letter-spacing: 1px;
+    color: rgba(233, 226, 245, 0.92);
+}
+
+/* ---------- marca de agua ---------- */
+.mm-marca-agua {
+    position: absolute;
+    right: 26px; bottom: -34px;
+    font-size: 150px;
+    color: rgba(255, 45, 155, 0.16);
+}

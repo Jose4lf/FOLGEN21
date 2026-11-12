@@ -1,0 +1,141 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+    <Style src="GameplayHUD.uss" />
+
+    <ui:VisualElement name="hudRoot" class="hud-root" picking-mode="Ignore">
+
+        <!-- ========== Jugador: retrato, nombre, nivel y barras ========== -->
+        <ui:VisualElement name="hudJugador" class="hud-jugador" picking-mode="Ignore">
+            <ui:VisualElement name="hudRetrato" class="hud-retrato" picking-mode="Ignore">
+                <ui:VisualElement name="hudRetratoImg" class="hud-retrato-img" picking-mode="Ignore" />
+                <ui:VisualElement name="hudRetratoMarco" class="hud-retrato-marco" picking-mode="Ignore" />
+                <ui:Label name="lblNivel" text="1" class="hud-nivel font-titulo" picking-mode="Ignore" />
+            </ui:VisualElement>
+            <ui:VisualElement name="hudDatos" class="hud-datos" picking-mode="Ignore">
+                <ui:Label name="lblNombre" text="JHOEL" class="hud-nombre font-titulo" picking-mode="Ignore" />
+                <ui:VisualElement class="f-barra hud-barra-vida" picking-mode="Ignore">
+                    <ui:VisualElement name="fillVida" class="f-barra__relleno hud-vida-relleno" picking-mode="Ignore" />
+                </ui:VisualElement>
+                <ui:VisualElement class="f-barra hud-barra-energia" picking-mode="Ignore">
+                    <ui:VisualElement name="fillEnergia" class="f-barra__relleno hud-energia-relleno" picking-mode="Ignore" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <!-- ========== Mision / tutorial ========== -->
+        <ui:VisualElement name="hudMision" class="hud-mision" picking-mode="Ignore">
+            <ui:VisualElement name="hudMisionIcono" class="hud-mision-icono" picking-mode="Ignore" />
+            <ui:VisualElement name="hudMisionTextos" class="hud-mision-textos" picking-mode="Ignore">
+                <ui:Label name="lblMisionTitulo" text="TUTORIAL: MOVIMIENTO" class="hud-mision-titulo font-titulo" picking-mode="Ignore" />
+                <ui:Label name="lblMisionObjetivo" text="Dirígete al punto de control (45 m)" class="hud-mision-objetivo font-texto" picking-mode="Ignore" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <!-- ========== Controles: modo movimiento ========== -->
+        <ui:VisualElement name="grupoMovimiento" class="hud-controles" picking-mode="Ignore">
+            <ui:VisualElement class="hud-controles-fila" picking-mode="Ignore">
+                <ui:Label text="W" class="f-kbd" picking-mode="Ignore" />
+                <ui:Label text="A" class="f-kbd" picking-mode="Ignore" />
+                <ui:Label text="S" class="f-kbd" picking-mode="Ignore" />
+                <ui:Label text="D" class="f-kbd" picking-mode="Ignore" />
+                <ui:Label text="Mover" class="hud-controles-texto font-texto" picking-mode="Ignore" />
+            </ui:VisualElement>
+            <ui:VisualElement class="hud-controles-fila" picking-mode="Ignore">
+                <ui:Label text="ESPACIO" class="f-kbd" picking-mode="Ignore" />
+                <ui:Label text="Saltar" class="hud-controles-texto font-texto" picking-mode="Ignore" />
+            </ui:VisualElement>
+            <ui:VisualElement class="hud-controles-fila" picking-mode="Ignore">
+                <ui:Label text="SHIFT" class="f-kbd" picking-mode="Ignore" />
+                <ui:Label text="Esquivar" class="hud-controles-texto font-texto" picking-mode="Ignore" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <!-- ========== Controles: modo disparo (oculto por defecto) ========== -->
+        <ui:VisualElement name="grupoDisparo" class="hud-controles" style="display: none;" picking-mode="Ignore">
+            <ui:VisualElement class="hud-controles-fila" picking-mode="Ignore">
+                <ui:Label text="LMB" class="f-kbd" picking-mode="Ignore" />
+                <ui:Label text="Mantén clic izquierdo para disparar" class="hud-controles-texto font-texto" picking-mode="Ignore" />
+            </ui:VisualElement>
+            <ui:VisualElement class="hud-controles-fila" picking-mode="Ignore">
+                <ui:Label text="R" class="f-kbd" picking-mode="Ignore" />
+                <ui:Label text="Recargar" class="hud-controles-texto font-texto" picking-mode="Ignore" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <!-- ========== Minimapa circular ========== -->
+        <ui:VisualElement name="hudMinimapa" class="hud-minimapa" picking-mode="Ignore">
+            <ui:Image name="imgMinimapa" class="hud-minimapa-img" picking-mode="Ignore" />
+            <ui:Label text="N" class="hud-minimapa-n font-titulo" picking-mode="Ignore" />
+            <ui:VisualElement name="flechaJugador" class="hud-minimapa-flecha" picking-mode="Ignore" />
+            <ui:VisualElement name="marcadorMinimapa" class="hud-minimapa-marcador" picking-mode="Ignore" />
+        </ui:VisualElement>
+
+        <!-- ========== Caja de consejos (derecha) ========== -->
+        <ui:VisualElement name="cajaTip" class="hud-tip" picking-mode="Ignore">
+            <ui:VisualElement class="hud-tip-icono" picking-mode="Ignore" />
+            <ui:Label name="lblTip" text="Usa el mapa para encontrar tu objetivo." class="hud-tip-texto font-texto" picking-mode="Ignore" />
+        </ui:VisualElement>
+
+        <!-- ========== Mira central ========== -->
+        <ui:VisualElement name="mira" class="hud-mira" picking-mode="Ignore">
+            <ui:VisualElement class="hud-mira-barra hud-mira-izq" picking-mode="Ignore" />
+            <ui:VisualElement class="hud-mira-barra hud-mira-der" picking-mode="Ignore" />
+            <ui:VisualElement class="hud-mira-barra hud-mira-arriba" picking-mode="Ignore" />
+            <ui:VisualElement class="hud-mira-barra hud-mira-abajo" picking-mode="Ignore" />
+            <ui:VisualElement class="hud-mira-punto" picking-mode="Ignore" />
+        </ui:VisualElement>
+
+        <!-- ========== Marcador de objetivo en el mundo (posicionado por codigo) ========== -->
+        <ui:VisualElement name="marcadorMundo" class="hud-marcador-mundo" style="display: none;" picking-mode="Ignore">
+            <ui:VisualElement class="hud-marcador-diamante" picking-mode="Ignore" />
+            <ui:Label name="lblDistancia" text="45 m" class="hud-marcador-distancia font-texto-sb" picking-mode="Ignore" />
+        </ui:VisualElement>
+
+        <!-- ========== Skills y municion (abajo derecha) ========== -->
+        <ui:VisualElement name="hudAcciones" class="hud-acciones" picking-mode="Ignore">
+            <ui:VisualElement name="filaSkills" class="hud-skills" picking-mode="Ignore">
+
+                <ui:VisualElement name="skill0" class="hud-skill" picking-mode="Ignore">
+                    <ui:VisualElement name="skill0Marco" class="hud-skill-marco hud-skill-marco-q" picking-mode="Ignore">
+                        <ui:VisualElement name="skill0Icono" class="hud-skill-icono hud-skill-icono-q" picking-mode="Ignore" />
+                        <ui:VisualElement name="skill0Enf" class="hud-skill-enf" style="height: 0%;" picking-mode="Ignore" />
+                        <ui:Label name="skill0Cant" text="" class="hud-skill-cant font-texto-sb" picking-mode="Ignore" />
+                    </ui:VisualElement>
+                    <ui:Label text="Q" class="hud-skill-tecla font-titulo" picking-mode="Ignore" />
+                </ui:VisualElement>
+
+                <ui:VisualElement name="skill1" class="hud-skill" picking-mode="Ignore">
+                    <ui:VisualElement name="skill1Marco" class="hud-skill-marco hud-skill-marco-e" picking-mode="Ignore">
+                        <ui:VisualElement name="skill1Icono" class="hud-skill-icono hud-skill-icono-e" picking-mode="Ignore" />
+                        <ui:VisualElement name="skill1Enf" class="hud-skill-enf" style="height: 0%;" picking-mode="Ignore" />
+                        <ui:Label name="skill1Cant" text="" class="hud-skill-cant font-texto-sb" picking-mode="Ignore" />
+                    </ui:VisualElement>
+                    <ui:Label text="E" class="hud-skill-tecla font-titulo" picking-mode="Ignore" />
+                </ui:VisualElement>
+
+                <ui:VisualElement name="skill2" class="hud-skill" picking-mode="Ignore">
+                    <ui:VisualElement name="skill2Marco" class="hud-skill-marco hud-skill-marco-r" picking-mode="Ignore">
+                        <ui:VisualElement name="skill2Icono" class="hud-skill-icono hud-skill-icono-r" picking-mode="Ignore" />
+                        <ui:VisualElement name="skill2Enf" class="hud-skill-enf" style="height: 0%;" picking-mode="Ignore" />
+                        <ui:Label name="skill2Cant" text="" class="hud-skill-cant font-texto-sb" picking-mode="Ignore" />
+                    </ui:VisualElement>
+                    <ui:Label text="R" class="hud-skill-tecla font-titulo" picking-mode="Ignore" />
+                </ui:VisualElement>
+
+                <ui:VisualElement name="skill3" class="hud-skill" picking-mode="Ignore">
+                    <ui:VisualElement name="skill3Marco" class="hud-skill-marco hud-skill-marco-i" picking-mode="Ignore">
+                        <ui:VisualElement name="skill3Icono" class="hud-skill-icono hud-skill-icono-i" picking-mode="Ignore" />
+                        <ui:VisualElement name="skill3Enf" class="hud-skill-enf" style="height: 0%;" picking-mode="Ignore" />
+                        <ui:Label name="skill3Cant" text="3" class="hud-skill-cant font-texto-sb" picking-mode="Ignore" />
+                    </ui:VisualElement>
+                    <ui:Label text="I" class="hud-skill-tecla font-titulo" picking-mode="Ignore" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+
+            <ui:VisualElement name="hudMunicion" class="hud-municion" picking-mode="Ignore">
+                <ui:VisualElement name="iconoArma" class="hud-municion-icono" picking-mode="Ignore" />
+                <ui:Label name="lblMunicionActual" text="12" class="hud-municion-actual font-titulo" picking-mode="Ignore" />
+                <ui:Label name="lblMunicionReserva" text="/ 48" class="hud-municion-reserva font-texto" picking-mode="Ignore" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

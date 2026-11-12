@@ -1,0 +1,51 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+    <Style src="SettingsMenu.uss" />
+
+    <ui:VisualElement name="ajRoot" class="aj-root" picking-mode="Ignore">
+        <ui:VisualElement name="ajFondo" class="aj-fondo" />
+
+        <ui:VisualElement name="ajPanel" class="aj-panel f-panel">
+            <ui:Label text="AJUSTES" class="aj-titulo font-logo" />
+            <ui:VisualElement class="f-subrayado-magenta aj-subrayado" picking-mode="Ignore" />
+
+            <ui:VisualElement name="ajFilas" class="aj-filas">
+
+                <ui:VisualElement class="aj-fila" picking-mode="Ignore">
+                    <ui:Slider name="sMusica" label="MÚSICA" low-value="0" high-value="1" value="0.8" show-input-field="false" class="aj-slider" />
+                </ui:VisualElement>
+
+                <ui:VisualElement class="aj-fila" picking-mode="Ignore">
+                    <ui:Slider name="sEfectos" label="EFECTOS" low-value="0" high-value="1" value="0.8" show-input-field="false" class="aj-slider" />
+                </ui:VisualElement>
+
+                <ui:VisualElement class="aj-fila" picking-mode="Ignore">
+                    <ui:Slider name="sSensibilidad" label="SENSIBILIDAD" low-value="0.1" high-value="3" value="1" show-input-field="false" class="aj-slider" />
+                </ui:VisualElement>
+
+                <ui:VisualElement class="aj-fila" picking-mode="Ignore">
+                    <ui:DropdownField name="dCalidad" label="CALIDAD" class="aj-dropdown" />
+                </ui:VisualElement>
+
+                <ui:VisualElement class="aj-fila" picking-mode="Ignore">
+                    <ui:DropdownField name="dResolucion" label="RESOLUCIÓN" class="aj-dropdown" />
+                </ui:VisualElement>
+
+                <ui:VisualElement class="aj-fila" picking-mode="Ignore">
+                    <ui:Toggle name="tPantallaCompleta" label="PANTALLA COMPLETA" value="true" class="aj-toggle" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+
+            <ui:VisualElement class="aj-botones">
+                <ui:Button name="btnRestaurar" class="f-btn f-btn--compacto aj-btn-ghost">
+                    <ui:Label text="RESTAURAR" class="pm-btn-texto" picking-mode="Ignore" />
+                </ui:Button>
+                <ui:Button name="btnAplicar" class="f-btn f-btn--compacto aj-btn-aplicar">
+                    <ui:Label text="APLICAR" class="pm-btn-texto" picking-mode="Ignore" />
+                </ui:Button>
+                <ui:Button name="btnVolver" class="f-btn f-btn--compacto aj-btn-ghost">
+                    <ui:Label text="VOLVER" class="pm-btn-texto" picking-mode="Ignore" />
+                </ui:Button>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

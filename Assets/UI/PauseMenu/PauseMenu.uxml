@@ -1,0 +1,43 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+    <Style src="PauseMenu.uss" />
+
+    <ui:VisualElement name="pmRoot" class="pm-root" picking-mode="Ignore">
+        <!-- Fondo oscurecido que captura clics mientras la pausa esta abierta -->
+        <ui:VisualElement name="pmFondo" class="pm-fondo" />
+
+        <ui:VisualElement name="pmPanel" class="pm-panel f-panel">
+            <ui:Label text="PAUSA" class="pm-titulo font-logo" />
+            <ui:VisualElement class="f-subrayado-magenta pm-subrayado" picking-mode="Ignore" />
+
+            <ui:VisualElement class="pm-botones">
+                <ui:Button name="btnContinuar" class="f-btn f-btn--compacto">
+                    <ui:VisualElement class="f-btn__fila">
+                        <ui:VisualElement class="f-btn__icono pm-icono-continuar" picking-mode="Ignore" />
+                        <ui:Label text="CONTINUAR" class="pm-btn-texto" picking-mode="Ignore" />
+                    </ui:VisualElement>
+                </ui:Button>
+
+                <ui:Button name="btnAjustes" class="f-btn f-btn--compacto">
+                    <ui:VisualElement class="f-btn__fila">
+                        <ui:VisualElement class="f-btn__icono pm-icono-ajustes" picking-mode="Ignore" />
+                        <ui:Label text="AJUSTES" class="pm-btn-texto" picking-mode="Ignore" />
+                    </ui:VisualElement>
+                </ui:Button>
+
+                <ui:Button name="btnMenuPrincipal" class="f-btn f-btn--compacto">
+                    <ui:VisualElement class="f-btn__fila">
+                        <ui:VisualElement class="f-btn__icono pm-icono-menu" picking-mode="Ignore" />
+                        <ui:Label text="MENÚ PRINCIPAL" class="pm-btn-texto" picking-mode="Ignore" />
+                    </ui:VisualElement>
+                </ui:Button>
+
+                <ui:Button name="btnSalir" class="f-btn f-btn--compacto">
+                    <ui:VisualElement class="f-btn__fila">
+                        <ui:VisualElement class="f-btn__icono pm-icono-salir" picking-mode="Ignore" />
+                        <ui:Label text="SALIR" class="pm-btn-texto" picking-mode="Ignore" />
+                    </ui:VisualElement>
+                </ui:Button>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

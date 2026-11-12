@@ -1,0 +1,69 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+    <Style src="MainMenu.uss" />
+
+    <ui:VisualElement name="mmRoot" class="mm-root" picking-mode="Ignore">
+        <!-- Vineta oscura sobre el fondo -->
+        <ui:VisualElement name="mmVineta" class="mm-vineta" picking-mode="Ignore" />
+
+        <!-- Version arriba-izquierda -->
+        <ui:Label name="mmVersion" text="FOLGEN 21 v1.0.0" class="mm-version font-texto" picking-mode="Ignore" />
+
+        <!-- Boton de engranaje arriba-derecha -->
+        <ui:Button name="btnEngranaje" class="mm-gearbtn" tooltip="Ajustes" />
+
+        <!-- Bloque central: logo + menu -->
+        <ui:VisualElement name="mmCentro" class="mm-centro" picking-mode="Ignore">
+            <ui:VisualElement name="mmLogoFila" class="mm-logo-fila" picking-mode="Ignore">
+                <ui:Label text="FOLGEN" class="mm-logo-a font-logo" />
+                <ui:Label text="21" class="mm-logo-b font-logo" />
+            </ui:VisualElement>
+
+            <ui:VisualElement name="mmSubFila" class="mm-sub-fila" picking-mode="Ignore">
+                <ui:Label text="FUERA DEL&#160;" class="mm-sub-a font-texto-sb" />
+                <ui:Label text="PRONÓSTICO" class="mm-sub-b font-texto-sb" />
+            </ui:VisualElement>
+
+            <ui:VisualElement class="f-subrayado-magenta mm-subrayado" picking-mode="Ignore" />
+
+            <ui:VisualElement name="mmBotones" class="mm-botones">
+                <ui:Button name="btnNuevaPartida" class="f-btn mm-btn-seleccionada">
+                    <ui:VisualElement class="f-btn__fila">
+                        <ui:VisualElement class="f-btn__icono mm-icono-play" picking-mode="Ignore" />
+                        <ui:Label text="NUEVA PARTIDA" class="mm-btn-texto" picking-mode="Ignore" />
+                    </ui:VisualElement>
+                </ui:Button>
+
+                <ui:Button name="btnContinuar" class="f-btn">
+                    <ui:VisualElement class="f-btn__fila">
+                        <ui:VisualElement class="f-btn__icono mm-icono-continuar" picking-mode="Ignore" />
+                        <ui:Label text="CONTINUAR" class="mm-btn-texto" picking-mode="Ignore" />
+                    </ui:VisualElement>
+                </ui:Button>
+
+                <ui:Button name="btnAjustes" class="f-btn">
+                    <ui:VisualElement class="f-btn__fila">
+                        <ui:VisualElement class="f-btn__icono mm-icono-ajustes" picking-mode="Ignore" />
+                        <ui:Label text="AJUSTES" class="mm-btn-texto" picking-mode="Ignore" />
+                    </ui:VisualElement>
+                </ui:Button>
+
+                <ui:Button name="btnSalir" class="f-btn">
+                    <ui:VisualElement class="f-btn__fila">
+                        <ui:VisualElement class="f-btn__icono mm-icono-salir" picking-mode="Ignore" />
+                        <ui:Label text="SALIR" class="mm-btn-texto" picking-mode="Ignore" />
+                    </ui:VisualElement>
+                </ui:Button>
+            </ui:VisualElement>
+        </ui:VisualElement>
+
+        <!-- Eslogan inferior -->
+        <ui:VisualElement name="mmSloganFila" class="mm-slogan-fila" picking-mode="Ignore">
+            <ui:VisualElement class="mm-slogan-linea" picking-mode="Ignore" />
+            <ui:Label text="Enfrenta tu destino en un mundo sin reglas" class="mm-slogan font-texto" picking-mode="Ignore" />
+            <ui:VisualElement class="mm-slogan-linea" picking-mode="Ignore" />
+        </ui:VisualElement>
+
+        <!-- Marca de agua decorativa -->
+        <ui:Label text="21" class="mm-marca-agua font-logo" picking-mode="Ignore" />
+    </ui:VisualElement>
+</ui:UXML>

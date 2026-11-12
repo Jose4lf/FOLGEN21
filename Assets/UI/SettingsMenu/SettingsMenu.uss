@@ -1,0 +1,131 @@
+/* ============================================================
+   Folgen 21 - Menu de Ajustes
+   Estiliza los controles nativos de UI Toolkit (Slider, Dropdown, Toggle)
+   ============================================================ */
+
+.aj-fondo {
+    position: absolute;
+    left: 0; top: 0; right: 0; bottom: 0;
+    background-color: rgba(9, 4, 18, 0.82);
+}
+
+.aj-panel {
+    position: absolute;
+    left: 0; right: 0; top: 0; bottom: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0);
+    border-width: 0;
+    border-radius: 0;
+}
+
+.aj-titulo {
+    font-size: 58px;
+    color: rgb(255, 255, 255);
+    letter-spacing: 10px;
+    text-shadow: 0 0 24px rgba(255, 45, 155, 0.45);
+    margin-bottom: 10px;
+}
+
+.aj-subrayado {
+    width: 300px;
+    margin-bottom: 34px;
+}
+
+/* ---------- filas ---------- */
+.aj-filas {
+    width: 880px;
+    margin-bottom: 26px;
+}
+
+.aj-fila {
+    margin-bottom: 22px;
+}
+
+/* etiquetas de los controles nativos */
+.aj-fila .unity-base-field__label {
+    min-width: 250px;
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    letter-spacing: 1px;
+    -unity-font: url("../Fonts/Rajdhani-600.ttf");
+}
+
+/* ---------- Slider ---------- */
+.aj-fila .unity-base-slider__tracker {
+    background-color: rgba(58, 42, 94, 0.7);
+    border-radius: 8px;
+    border-width: 0;
+    height: 10px;
+    margin-top: 4px;
+}
+
+.aj-fila .unity-base-slider__dragger {
+    background-color: rgb(255, 45, 155);
+    border-radius: 14px;
+    border-width: 0;
+    width: 18px;
+    height: 22px;
+    -unity-background-image-tint-color: rgb(255, 45, 155);
+}
+
+.aj-fila .unity-base-slider__dragger:hover {
+    background-color: rgb(255, 95, 193);
+}
+
+/* ---------- Dropdown ---------- */
+.aj-fila .unity-base-popup-field__input {
+    background-color: rgba(58, 42, 94, 0.85);
+    border-color: rgba(185, 175, 214, 0.45);
+    border-width: 1px;
+    border-radius: 8px;
+    color: rgb(255, 255, 255);
+    font-size: 23px;
+    -unity-font: url("../Fonts/Rajdhani-500.ttf");
+    padding: 6px 12px;
+}
+
+.aj-fila .unity-base-popup-field__text {
+    color: rgb(255, 255, 255);
+}
+
+/* ---------- Toggle ---------- */
+.aj-fila .unity-toggle__checkmark {
+    background-color: rgba(58, 42, 94, 0.85);
+    border-color: rgba(185, 175, 214, 0.45);
+    border-width: 1px;
+    border-radius: 6px;
+    width: 26px;
+    height: 26px;
+    -unity-background-image-tint-color: rgb(255, 45, 155);
+}
+
+/* ---------- Botones del pie ---------- */
+.aj-botones {
+    flex-direction: row;
+    align-items: center;
+}
+
+.aj-botones .f-btn {
+    width: 240px;
+    margin: 0 12px;
+}
+
+.aj-btn-ghost {
+    background-image: none;
+    background-color: rgba(28, 16, 48, 0.9);
+    border-color: rgba(185, 175, 214, 0.4);
+    border-width: 1px;
+    border-radius: 10px;
+    font-size: 26px;
+}
+
+.aj-btn-ghost:hover {
+    background-color: rgba(48, 30, 82, 0.95);
+    border-color: rgb(255, 45, 155);
+}
+
+.aj-btn-aplicar,
+.aj-btn-aplicar:hover {
+    background-image: url("../Art/btn_frame_hover.png");
+}

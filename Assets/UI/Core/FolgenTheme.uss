@@ -1,0 +1,127 @@
+/* ============================================================
+   Folgen 21 - Tema compartido de UI Toolkit
+   Tokens de diseño + estilos reutilizables (botones, paneles, teclas)
+   Unity 6 (6000.3.x) - runtime UI Toolkit
+   ============================================================ */
+
+/* ---------- Pantalla raiz (siempre ocupa toda la vista) ---------- */
+.fscreen {
+    position: absolute;
+    left: 0; top: 0; right: 0; bottom: 0;
+    /* Tokens de color del proyecto */
+    --c-fondo: #120A1F;
+    --c-panel: #1C1030;
+    --c-panel-borde: #3A2A5E;
+    --c-magenta: #FF2D9B;
+    --c-magenta-claro: #FF5FC1;
+    --c-cyan: #35D6FF;
+    --c-blanco: #FFFFFF;
+    --c-texto-suave: #B9AFD6;
+    --c-oro: #FFD23F;
+    --c-vida: #FF3B5C;
+    --c-energia: #2FB4FF;
+    --c-rojo: #FF3B3B;
+}
+
+/* ---------- Tipografias ---------- */
+.font-logo   { -unity-font: url("../Fonts/Orbitron-900.ttf"); }
+.font-titulo { -unity-font: url("../Fonts/Orbitron-700.ttf"); }
+.font-texto  { -unity-font: url("../Fonts/Rajdhani-500.ttf"); }
+.font-texto-sb { -unity-font: url("../Fonts/Rajdhani-600.ttf"); }
+
+/* ---------- Boton principal (marco angular 9-slice) ---------- */
+.f-btn {
+    height: 86px;
+    background-image: url("../Art/btn_frame_idle.png");
+    -unity-slice-left: 46;
+    -unity-slice-right: 46;
+    -unity-slice-top: 28;
+    -unity-slice-bottom: 28;
+    align-items: center;
+    justify-content: center;
+    -unity-font: url("../Fonts/Orbitron-700.ttf");
+    -unity-font-style: normal;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    letter-spacing: 4px;
+    -unity-text-align: middle-center;
+    white-space: nowrap;
+    transition-property: color;
+    transition-duration: 0.12s;
+    padding: 0 28px;
+}
+
+.f-btn:hover {
+    background-image: url("../Art/btn_frame_hover.png");
+    color: rgb(255, 225, 241);
+}
+
+.f-btn:active {
+    color: rgb(53, 214, 255);
+}
+
+.f-btn:disabled {
+    opacity: 0.35;
+}
+
+/* Variante compacta para el menu de pausa */
+.f-btn--compacto { height: 74px; }
+
+/* Fila interna de icono + texto dentro del boton */
+.f-btn__fila {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.f-btn__icono {
+    width: 30px;
+    height: 30px;
+    margin-right: 18px;
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+}
+
+/* ---------- Paneles oscuros ---------- */
+.f-panel {
+    background-color: rgba(22, 12, 38, 0.94);
+    border-color: var(--c-panel-borde);
+    border-width: 1px;
+    border-radius: 14px;
+}
+
+/* ---------- Teclas (keycaps) ---------- */
+.f-kbd {
+    min-width: 34px;
+    height: 30px;
+    background-color: rgba(58, 42, 94, 0.85);
+    border-color: rgba(185, 175, 214, 0.5);
+    border-width: 1px;
+    border-radius: 5px;
+    -unity-font: url("../Fonts/Rajdhani-600.ttf");
+    font-size: 17px;
+    color: rgb(255, 255, 255);
+    -unity-text-align: middle-center;
+    padding: 0 6px;
+    margin-right: 8px;
+}
+
+/* ---------- Titulos ---------- */
+.f-subrayado-magenta {
+    height: 5px;
+    background-image: linear-gradient(90deg, rgba(255, 45, 155, 0.0), rgb(255, 45, 155), rgba(255, 45, 155, 0.0));
+    border-radius: 3px;
+}
+
+/* ---------- Barras genericas (vida, energia, carga) ---------- */
+.f-barra {
+    background-color: rgba(26, 16, 46, 0.9);
+    border-color: rgba(0, 0, 0, 0.4);
+    border-width: 1px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.f-barra__relleno {
+    height: 100%;
+    border-radius: 6px;
+}

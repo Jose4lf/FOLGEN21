@@ -1,0 +1,32 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+    <Style src="LoadingScreen.uss" />
+
+    <ui:VisualElement name="lsRoot" class="ls-root" picking-mode="Ignore">
+
+        <!-- Logo arriba-izquierda -->
+        <ui:VisualElement name="lsLogo" class="ls-logo" picking-mode="Ignore">
+            <ui:VisualElement class="ls-logo-fila" picking-mode="Ignore">
+                <ui:Label text="FOLGEN" class="ls-logo-a font-logo" picking-mode="Ignore" />
+                <ui:Label text="21" class="ls-logo-b font-logo" picking-mode="Ignore" />
+            </ui:VisualElement>
+            <ui:Label text="FUERA DEL PRONÓSTICO" class="ls-logo-sub font-texto-sb" picking-mode="Ignore" />
+        </ui:VisualElement>
+
+        <!-- Bloque de carga (abajo derecha) -->
+        <ui:VisualElement name="lsBloque" class="ls-bloque" picking-mode="Ignore">
+            <ui:Label text="CARGANDO..." class="ls-titulo font-titulo" picking-mode="Ignore" />
+
+            <ui:VisualElement name="lsFilaProgreso" class="ls-fila-progreso" picking-mode="Ignore">
+                <ui:VisualElement name="lsTrack" class="ls-track" picking-mode="Ignore">
+                    <ui:VisualElement name="lsFill" class="ls-fill" style="width: 0%;" picking-mode="Ignore" />
+                </ui:VisualElement>
+                <ui:Label name="lblPorcentaje" text="0%" class="ls-porcentaje font-titulo" picking-mode="Ignore" />
+            </ui:VisualElement>
+
+            <ui:VisualElement name="lsTip" class="ls-tip" picking-mode="Ignore">
+                <ui:VisualElement class="ls-tip-icono" picking-mode="Ignore" />
+                <ui:Label name="lblConsejo" text="Consejo: Explora el mundo para encontrar mejores recursos y desbloquear habilidades." class="ls-tip-texto font-texto" picking-mode="Ignore" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

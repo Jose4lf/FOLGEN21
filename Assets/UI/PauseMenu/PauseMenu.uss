@@ -1,0 +1,47 @@
+/* ============================================================
+   Folgen 21 - Menu de Pausa
+   ============================================================ */
+
+.pm-fondo {
+    position: absolute;
+    left: 0; top: 0; right: 0; bottom: 0;
+    background-color: rgba(9, 4, 18, 0.82);
+}
+
+.pm-panel {
+    position: absolute;
+    left: 0; right: 0; top: 0; bottom: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0);
+    border-width: 0;
+    border-radius: 0;
+}
+
+.pm-titulo {
+    font-size: 66px;
+    color: rgb(255, 45, 155);
+    letter-spacing: 12px;
+    text-shadow: 0 0 30px rgba(255, 45, 155, 0.55);
+    margin-bottom: 10px;
+}
+
+.pm-subrayado {
+    width: 320px;
+    margin-bottom: 46px;
+}
+
+.pm-botones {
+    width: 620px;
+    align-items: center;
+}
+
+.pm-botones .f-btn {
+    width: 620px;
+    margin-bottom: 16px;
+}
+
+.pm-icono-continuar { background-image: url("../Art/icon_play.png"); }
+.pm-icono-ajustes   { background-image: url("../Art/icon_gear.png"); }
+.pm-icono-menu      { background-image: url("../Art/icon_refresh.png"); }
+.pm-icono-salir     { background-image: url("../Art/icon_exit.png"); }
